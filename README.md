@@ -49,15 +49,6 @@ CycleGAN slides: [pptx](http://efrosgans.eecs.berkeley.edu/CVPR18_slides/CycleGA
 
 CycleGAN course assignment [code](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/assignments/a4-code.zip) and [handout](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/assignments/a4-handout.pdf) designed by Prof. [Roger Grosse](http://www.cs.toronto.edu/~rgrosse/) for [CSC321](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/) "Intro to Neural Networks and Machine Learning" at University of Toronto. Please contact the instructor if you would like to adopt it in your course.
 
-## Colab Notebook
-TensorFlow Core CycleGAN Tutorial: [Google Colab](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/generative/cyclegan.ipynb) | [Code](https://github.com/tensorflow/docs/blob/master/site/en/tutorials/generative/cyclegan.ipynb)
-
-TensorFlow Core pix2pix Tutorial: [Google Colab](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/generative/pix2pix.ipynb) | [Code](https://github.com/tensorflow/docs/blob/master/site/en/tutorials/generative/pix2pix.ipynb)
-
-PyTorch Colab notebook: [CycleGAN](https://colab.research.google.com/github/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/CycleGAN.ipynb) and [pix2pix](https://colab.research.google.com/github/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/pix2pix.ipynb)
-
-ZeroCostDL4Mic Colab notebook: [CycleGAN](https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks_Beta/CycleGAN_ZeroCostDL4Mic.ipynb) and [pix2pix](https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks_Beta/pix2pix_ZeroCostDL4Mic.ipynb)
-
 ## Other implementations
 ### CycleGAN
 <p><a href="https://github.com/leehomyc/cyclegan-1"> [Tensorflow]</a> (by Harry Yang),
@@ -107,26 +98,6 @@ cd pytorch-CycleGAN-and-pix2pix
   - For Conda users, you can create a new Conda environment using `conda env create -f environment.yml`.
   - For Docker users, we provide the pre-built Docker image and Dockerfile. Please refer to our [Docker](docs/docker.md) page.
   - For Repl users, please click [![Run on Repl.it](https://repl.it/badge/github/junyanz/pytorch-CycleGAN-and-pix2pix)](https://repl.it/github/junyanz/pytorch-CycleGAN-and-pix2pix).
-
-### CycleGAN train/test
-- Download a CycleGAN dataset (e.g. maps):
-```bash
-bash ./datasets/download_cyclegan_dataset.sh maps
-```
-- To view training results and loss plots, run `python -m visdom.server` and click the URL http://localhost:8097.
-- To log training progress and test images to W&B dashboard, set the `--use_wandb` flag with train and test script
-- Train a model:
-```bash
-#!./scripts/train_cyclegan.sh
-python train.py --dataroot ./datasets/maps --name maps_cyclegan --model cycle_gan
-```
-To see more intermediate results, check out `./checkpoints/maps_cyclegan/web/index.html`.
-- Test the model:
-```bash
-#!./scripts/test_cyclegan.sh
-python test.py --dataroot ./datasets/maps --name maps_cyclegan --model cycle_gan
-```
-- The test results will be saved to a html file here: `./results/maps_cyclegan/latest_test/index.html`.
 
 ### pix2pix train/test
 - Download a pix2pix dataset (e.g.[facades](http://cmp.felk.cvut.cz/~tylecr1/facade/)):
